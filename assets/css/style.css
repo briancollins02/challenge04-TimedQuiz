@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;600&display=swap');
+:root {
+    background-color: #000;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    height: 100vh;
+}
+
+.align-center {
+    align-self: center;
+}
+ 
+.align-items-center {
+    align-items: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.wrap {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.box-shadow {
+    box-shadow: 0rem 0rem 10rem rgba(12, 0, 50, 75%);
+}
+
+.bg-gradient {
+    background: linear-gradient(-45deg, #42275a, #734b6d, #bdc3c7, #2c3e50);
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+}
+
+.page-container {
+    height: 18rem;
+    width: 18rem;
+    align-content: center;
+    margin: auto;
+    border-radius: 3rem;
+}
+
+.page-container > * {
+    margin: .2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+button {
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    border: none;
+    color: #fff;
+    background: linear-gradient(-45deg, #ddd6f3, #faaca8, #ddd6f3, #faaca8);
+    background-size: 400% 400%;
+    animation: gradient 20s linear infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+ 
+    50% {
+        background-position: 100% 50%;
+    }
+ 
+    100% {
+        background-position: 0% 50%;
+    }
+}
