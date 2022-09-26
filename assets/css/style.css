@@ -118,16 +118,6 @@ button {
     padding: 0 1rem;
 }
 
-#ui-time-reamining::after {
-    content: " seconds left";
-    font-size: .75rem;
-}
-
-#ui-question-progress::after {
-    content: "/[total questions]";
-    font-size: .75rem;
-}
-
 .question-container {
     height: 5rem;
     width: 100%;
