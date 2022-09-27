@@ -86,7 +86,8 @@ h1 {
     font-size: 3rem;
 }
 
-button {
+button, #submit-button{
+    align-self: center;
     width: 8rem;
     height: 1.5rem;
     border-radius: 2rem;
@@ -97,7 +98,6 @@ button {
     background-size: 400% 400%;
     animation: gradient 20s linear infinite;
 }
-
 
 /* GAME BOX CSS */
 
@@ -118,10 +118,48 @@ button {
     padding: 0 1rem;
 }
 
+.ui-elem {
+    font-size: 1.25rem;
+}
+
 .question-container {
     height: 5rem;
     width: 100%;
     padding: 0 5rem;
+}
+
+/* End Screen */
+.end {
+    position: absolute;
+    align-self: center;
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background-color: rgba(12, 0, 50, 75%);
+    z-index: 999;
+}
+
+.end-container {
+    height: 20rem;
+    width: 40rem;
+    border-radius: 2rem;
+}
+
+.overlay {
+    background-color: rgba(12, 0, 50, 60%);
+    height:100%;
+    width:100%;
+    border-radius: inherit;
+}
+
+.text-input {
+    align-self: center;
+    width: 8rem;
+    height: 1.5rem;
+    border-radius: 2rem;
+    margin: .2rem;
 }
 
 /* High Scores */
@@ -136,6 +174,54 @@ button {
 li {
     list-style: decimal;
     margin: .25rem 0;
+}
+
+/* temp classes */
+.hide {
+    display: none;
+}
+
+.show {
+    display: show;
+    animation: show 2s ease;
+}
+
+.flash-red {
+animation: flashRed 2s ease-out;
+}
+
+.flash-red::after {
+    position: relative;
+    right: 65%;
+    top: 50%;
+    opacity: 100%;
+    content: '-5 seconds';
+    color: red;
+    animation: disappear 2s ease-out;
+}
+
+.flash-green {
+    animation: flashGreen 2s ease-out;
+}
+
+@keyframes show {
+    from {opacity: 0%}
+    to {opacity: 100%;}
+}
+
+@keyframes disappear {
+    from {opacity: 100%;}
+    to {opacity: 0%;}
+}
+
+@keyframes flashRed {
+    from {color: red;}
+    to {color: #fff;}
+}
+
+@keyframes flashGreen {
+    from {color: lightgreen;}
+    to {color: #fff;}
 }
 
 @keyframes gradient {
