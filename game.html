@@ -12,7 +12,7 @@
         <div class="game-container bg-gradient box-shadow align-center justify-space-around align-items-center flex-column">
             <!-- UI -->
             <div class="ui-display flex-row width-100 justify-space-between">
-                <p class="ui-elem" id="ui-time-remaining">5 seconds remaining</p>
+                <p class="ui-elem" id="ui-time-remaining">30 seconds remaining</p>
                 <p class="ui-elem" id="ui-question-progress">0 correct <span id="total-questions"></span></p>
             </div>
             <!-- Question Display -->
@@ -38,10 +38,12 @@
             <div class="overlay align-center justify-space-around align-items-center flex-column">
                 <h1 class="text-align-center"> Game Over</h1>
                 <p>You got <span id="total-scoreEl"></span> out of <span id="total-questionsEl"></span> correct!</p>
-                <form class="flex-column" id="form" onsubmit="return false;">
+                <p id="high-scoreEl" class="show text-align-center">A new High-Score!<br>Enter your initals(maximum 3 characters) and press submit to save</p>
+                <form class="flex-column hide" id="form" onsubmit="return false;">
                     <input id="initialsEl" class="text-input text-align-center" id="userInput" type="text" value="" placeholder="3 Characters" minlength="3" maxlength="3"/>
                     <input id="submit-button" type="submit" value="submit" onclick="saveScore();">
                 </form>
+                <a href="index.html"><button id="back-button" class="hide" type="button">Back</button></a>
             </div>
         </div>
        
